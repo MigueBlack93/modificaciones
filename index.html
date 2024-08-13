@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/icono.png">
+    <meta name="author" content="Miguel Ulmi">
+    <meta name="description" content="Este es el encriptador de texto del Primer Challenge de Alura en Oracle Next Education Grupo 7">
+    <meta name="keywords" content="encriptador, encriptador de texto, challenge Alura, Alura, ONE, Oracle Next Education, desencriptador, desencriptador de texto">
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="assets/logo.png" alt="Logo Alura Latam" class="header__imagen" id="logo-alura">
+        <h1 class="header__titulo">¡Bienvenido al encriptador de texto!</h1>        
+    </header>
+
+    <main class="main">
+        <section class="main__ingreso">
+            <textarea name="codigo__a__encriptar" class="main__ingreso__textarea" id="main-ingreso-textarea" placeholder="Ingrese aquí el texto" ></textarea>
+
+            <div class="main__advertencia">
+                <img src="assets/exclamacion.png" alt="Signo exclamacion gris" class="main__advertencia__imagen">
+                <p>Sólo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="main__buttons">
+                <button class="main__button__encriptar" id="main-button-encriptar" onclick="encriptar();" disabled>Encriptar</button>
+                <button class="main__button__desencriptar" id="main-button-desencriptar" onclick="desencriptar();" disabled>Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="main__devolucion">
+            <div class="main__devolucion__muneco" id="main-devolucion-muneco">
+                <img src="assets/muneco.png" alt="Muñeco buscando si hay algún mensaje para desencriptar" class="main__devolucion__img">
+                <h2 class="main__devolucion__titulo">Ningún mensaje fue encontrado</h2>
+                <p class="main__devolucion__texto">Ingrese el texto que desees encriptar o desencriptar.</p>
+            </div>
+
+            <div class="main__devolucion__encripto" id="main-devolucion-encripto" hidden>
+                <textarea name="codigo_a_desencriptar" class="main__devolucion__textarea" id="main-devolucion-textarea" readonly></textarea>
+                <button class="main__devolucion__copiar" id="main-devolucion-copiar" onclick="copiar();">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Desarrollado por <a class="footer__github" href="https://github.com/MigueBlack93" target="_blank" noopener noreferrer nofollow>Miguel</a> - 2024</p>
+    </footer>
+    
+    <script src="app/app.js"></script>
+
+</body>
+
+</html>
